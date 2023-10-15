@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todoproject.R
-import com.example.todoproject.Data.dataBase.NotesDataBase
 import com.example.todoproject.domain.Notes
 
 class NotesAdapter(private val notes: List<Notes>): RecyclerView.Adapter<NoteViewHolder>(){

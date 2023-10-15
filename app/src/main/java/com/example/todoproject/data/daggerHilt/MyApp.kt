@@ -1,4 +1,4 @@
-package com.example.todoproject.Data.daggerHilt
+package com.example.todoproject.data.daggerHilt
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

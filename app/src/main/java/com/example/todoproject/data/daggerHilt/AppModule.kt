@@ -1,9 +1,8 @@
-package com.example.todoproject.Data.daggerHilt
+package com.example.todoproject.data.daggerHilt
 
 import android.content.Context
 import androidx.room.Room
-import com.example.todoproject.Data.dataBase.NoteEntity
-import com.example.todoproject.domain.TakeNotes
+import com.example.todoproject.data.dataBase.NoteEntity
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

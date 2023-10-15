@@ -1,7 +1,6 @@
 package com.example.todoproject.Presentation.view
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -41,6 +40,7 @@ class SecondFragment(private var idClicked: Int) : Fragment() {
     }
 
     override fun onCreateView(
+
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
@@ -53,28 +53,30 @@ class SecondFragment(private var idClicked: Int) : Fragment() {
         return binding.root
     }
 
-    private fun deleteNoteBttListener(){
-        binding.deleteNoteBtt.setOnClickListener{
-            if(textBoxesAreClean() && idClicked != -1){
+    private fun deleteNoteBttListener() {
+        binding.deleteNoteBtt.setOnClickListener {
+            if (textBoxesAreClean() && idClicked != -1) {
                 AlertDialog.Builder(requireContext())
                     .setTitle("Confirm Action")
                     .setMessage("Are you sure to delete this note?")
-                    .setPositiveButton("Yes sir") { dialog, which ->
+                    .setPositiveButton("Yes sir") { _, _ ->
                         updateNotesViewModel.deleteNote(idClicked)
                         goBackToMainFragment()
                     }
-                    .setNegativeButton("Nope") { dialog, which ->
+                    .setNegativeButton("Nope") { dialog, _ ->
                         dialog.dismiss()
                     }
                     .show()
-            }else{
+            } else {
                 Toast.makeText(context, "There isn't note to delete", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    private fun textBoxesAreClean(): Boolean{
-        return binding.bodyNoteTxt.toString().isNotEmpty() && binding.titleNoteTxt.toString().isNotEmpty()
+    private fun textBoxesAreClean(): Boolean {
+        val bodyNoteTxt: String = binding.bodyNoteTxt.text.toString()
+        val titleNoteTxt: String = binding.titleNoteTxt.text.toString()
+        return bodyNoteTxt.isNotEmpty() && titleNoteTxt.isNotEmpty()
     }
 
     private fun saveNoteBttListener() {

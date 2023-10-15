@@ -3,7 +3,6 @@ package com.example.todoproject.Presentation.view.recyclerView
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todoproject.databinding.ForItemsBinding
-import com.example.todoproject.Data.dataBase.NotesDataBase
 import com.example.todoproject.domain.Notes
 
 class NoteViewHolder(view: View): RecyclerView.ViewHolder(view) {

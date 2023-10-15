@@ -1,12 +1,7 @@
 package com.example.todoproject.domain
 
-import android.content.Context
-import android.database.sqlite.SQLiteDatabase
-import android.util.Log
-import androidx.room.Room
-import com.example.todoproject.Data.dataBase.NoteEntity
-import com.example.todoproject.Data.dataBase.NoteDao
-import com.example.todoproject.Data.dataBase.NotesDataBase
+import com.example.todoproject.data.dataBase.NoteDao
+import com.example.todoproject.data.dataBase.NotesDataBase
 import javax.inject.Inject
 
 class TakeNotes @Inject constructor(
@@ -39,5 +34,14 @@ class TakeNotes @Inject constructor(
         } else {
             noteDao.add(NotesDataBase(lastId++, titleNote, "00", bodyNote))
         }
+    }
+
+    suspend fun searchNote(titleNote: String): List<Notes>{
+        getAllNotes().forEach {
+            if (it.title == titleNote){
+                return listOf(it)
+            }
+        }
+        return emptyList()
     }
 }
