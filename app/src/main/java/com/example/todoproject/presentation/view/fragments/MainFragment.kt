@@ -1,4 +1,4 @@
-package com.example.todoproject.Presentation.view
+package com.example.todoproject.presentation.view.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -15,10 +15,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todoproject.R
 import com.example.todoproject.databinding.FragmentMainBinding
-import com.example.todoproject.Presentation.view.recyclerView.NotesAdapter
-import com.example.todoproject.Presentation.viewmodel.UpdateNotesViewModel
-import com.example.todoproject.core.listIsEmpty
-import com.example.todoproject.core.listIsNotEmpty
+import com.example.todoproject.presentation.view.recyclerView.NotesAdapter
+import com.example.todoproject.presentation.viewmodel.UpdateNotesViewModel
+import com.example.todoproject.presentation.core.listIsEmpty
+import com.example.todoproject.presentation.core.listIsNotEmpty
 import com.example.todoproject.domain.Notes
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -64,7 +64,6 @@ class MainFragment : Fragment() {
 
     private fun searchNote(writtenText: String) {
         binding.searchViewTxt.setText("")
-        Log.d("prueba", "no se esconda esta mrd asquerosa")
         hideKeyboard()
         updateNotesViewModel.updateSearchList(writtenText)
     }

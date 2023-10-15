@@ -1,7 +1,8 @@
-package com.example.todoproject.Presentation.view
+package com.example.todoproject.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.todoproject.presentation.view.fragments.MainFragment
 import com.example.todoproject.R
 import dagger.hilt.android.AndroidEntryPoint
 

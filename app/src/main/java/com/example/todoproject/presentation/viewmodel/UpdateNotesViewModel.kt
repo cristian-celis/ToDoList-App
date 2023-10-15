@@ -1,4 +1,4 @@
-package com.example.todoproject.Presentation.viewmodel
+package com.example.todoproject.presentation.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

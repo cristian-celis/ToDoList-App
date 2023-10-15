@@ -1,4 +1,4 @@
-package com.example.todoproject.Presentation.view
+package com.example.todoproject.presentation.view.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.viewModels
-import com.example.todoproject.Presentation.viewmodel.UpdateNotesViewModel
+import com.example.todoproject.presentation.viewmodel.UpdateNotesViewModel
 import com.example.todoproject.R
 import com.example.todoproject.databinding.FragmentSecondBinding
 import dagger.hilt.android.AndroidEntryPoint

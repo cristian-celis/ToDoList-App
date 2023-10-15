@@ -1,4 +1,4 @@
-package com.example.todoproject.Presentation.view.recyclerView
+package com.example.todoproject.presentation.view.recyclerView
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
